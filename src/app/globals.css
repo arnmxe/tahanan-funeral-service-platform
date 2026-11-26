@@ -1,0 +1,74 @@
+@import "tailwindcss";
+
+@layer base {
+  :root {
+    --forest-deep: #183B35;
+    --forest-hover: #122D28;
+    --ivory-warm: #F6F1E8;
+    --ivory-elevated: #FBF9F5;
+    --ivory-parchment: #EDE5D8;
+    --champagne-gold: #D9C7A5;
+    --taupe-muted: #B7A99A;
+    --charcoal-ink: #242522;
+    --charcoal-muted: #5A5751;
+  }
+
+  body {
+    background-color: #F6F1E8;
+    color: #242522;
+    font-family: var(--font-sans), -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+    font-size: 16px;
+    line-height: 1.65;
+    background-image: radial-gradient(rgba(183, 169, 154, 0.16) 1px, transparent 0);
+    background-size: 28px 28px;
+  }
+
+  h1, h2, h3, h4, .font-display {
+    font-family: var(--font-display), Georgia, "Times New Roman", serif;
+    letter-spacing: -0.015em;
+  }
+
+  .font-price,
+  .font-mono-num {
+    font-family: var(--font-price), var(--font-sans), sans-serif;
+    font-variant-numeric: tabular-nums;
+    letter-spacing: -0.015em;
+  }
+
+  .font-code {
+    font-family: var(--font-price), ui-monospace, SFMono-Regular, monospace;
+    font-variant-numeric: tabular-nums;
+    letter-spacing: 0.02em;
+  }
+
+  .editorial-grain {
+    background-image:
+      linear-gradient(to bottom, rgba(246, 241, 232, 0.92), rgba(246, 241, 232, 0.96)),
+      repeating-linear-gradient(
+        45deg,
+        rgba(183, 169, 154, 0.06) 0px,
+        rgba(183, 169, 154, 0.06) 1px,
+        transparent 1px,
+        transparent 10px
+      );
+  }
+
+  .forest-weave {
+    background-color: #183B35;
+    background-image: radial-gradient(
+      circle at 85% 15%,
+      rgba(217, 199, 165, 0.12),
+      transparent 55%
+    );
+  }
+
+  button:not(:disabled),
+  [role="button"]:not(:disabled) {
+    cursor: pointer;
+  }
+
+  :focus-visible {
+    outline: 2px solid #183B35;
+    outline-offset: 2px;
+  }
+}
